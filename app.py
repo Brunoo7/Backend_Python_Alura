@@ -1,0 +1,7 @@
+print("=======================")
+print("     Sabor Express")
+print("1. Cadastrar restautante")
+print("2. Listar restaurantes")
+print("3. Ativar restaurante")
+print("4. Sair")
+print("=======================")
