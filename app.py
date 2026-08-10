@@ -1,3 +1,4 @@
+import os
 print("=====================================================================")
 print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
@@ -13,6 +14,11 @@ print("4. Sair")
 opcao = int(input(print("Escolha uma opção:")))
 print("=====================================================================")
 
+def finalizar_app():
+    print("Fechando o app...")
+    os.system("cls")
+
+
 if opcao == 1: {
     print("1. Cadastrar restautante")
 }
@@ -26,7 +32,7 @@ elif opcao == 3: {
 }
 
 elif opcao == 4: {
-    print("Fechando programa...")
+    finalizar_app()
 }
 
 else:
