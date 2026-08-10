@@ -6,10 +6,29 @@ print("""
 ░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗
 ██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
 ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░\n""")
-print("        1. Cadastrar restautante")
-print("        2. Listar restaurantes")
-print("        3. Ativar restaurante")
-print("        4. Sair")
-opcao = input(print("Escolha uma opção:"))
-print(f"Você escolheu a opção {opcao}")
+print("1. Cadastrar restautante")
+print("2. Listar restaurantes")
+print("3. Ativar restaurante")
+print("4. Sair")
+opcao = int(input(print("Escolha uma opção:")))
 print("=====================================================================")
+
+if opcao == 1: {
+    print("1. Cadastrar restautante")
+}
+
+elif opcao == 2: {
+    print("2. Listar restaurantes")
+}
+
+elif opcao == 3: {
+    print("3. Ativar restaurante")
+}
+
+elif opcao == 4: {
+    print("Fechando programa...")
+}
+
+else:
+    print("Opção inválida")
+    
