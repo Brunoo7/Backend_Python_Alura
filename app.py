@@ -3,12 +3,16 @@ import os
 restaurantes = ["Pizza Planet", "Los Pollos Hermanos", "Siri Cascudo"]
 
 def finalizar_app():
-    print("Fechando o app...")
-    os.system("cls")
+    subtitulo("Fechando app...")
 
 def voltar_menu():
     input("\nSelecione uma tecla para voltar ao menu principal: ")
     main()
+
+def subtitulo(texto):
+    os.system("cls")
+    print(texto)
+    print()
 
 def opcao_invalida():
     print("Opção inválida!")
@@ -18,19 +22,17 @@ def exibir_opcoes():
     print("1. Cadastrar restautante")
     print("2. Listar restaurantes")
     print("3. Ativar restaurante")
-    print("4. Sair")
+    print("4. Sair\n")
 
 def cadastrar_restaurante():
-    os.system("cls")
-    print("Cadastro de novos restaurantes\n")
+    subtitulo("Cadastro de novos restaurantes")
     nome_restaurante = input("Digite o nome do restaurante que deseja cadastrar: ")
     restaurantes.append(nome_restaurante)
     print(f"O restaurante {nome_restaurante} foi cadastrado com sucesso")
     voltar_menu()
 
 def lista_restaurantes():
-    os.system("cls")
-    print("Lista de restaurantes cadastrados:\n")
+    subtitulo("Lista de restaurantes cadastrados:")
     for restaurante in restaurantes:
         print(f"{restaurante}")
     voltar_menu()
