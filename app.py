@@ -6,6 +6,7 @@ restaurantes = [{"Nome":"Los Pollos Hermanos", "Categoria":"Frango Frito", "ativ
 
 def finalizar_app():
     subtitulo("Fechando app...")
+    os.system("cls")
 
 def voltar_menu():
     input("\nSelecione uma tecla para voltar ao menu principal: ")
@@ -13,7 +14,10 @@ def voltar_menu():
 
 def subtitulo(texto):
     os.system("cls")
+    linha = "=" * len(texto) 
+    print(linha)
     print(texto)
+    print(linha)
     print()
 
 def opcao_invalida():
@@ -23,7 +27,7 @@ def opcao_invalida():
 def exibir_opcoes():
     print("1. Cadastrar restautante")
     print("2. Listar restaurantes")
-    print("3. Ativar restaurante")
+    print("3. Alterar estado do restaurante restaurante")
     print("4. Sair\n")
 
 def cadastrar_restaurante():
@@ -37,11 +41,12 @@ def cadastrar_restaurante():
 
 def lista_restaurantes():
     subtitulo("Lista de restaurantes cadastrados:")
+    print(f"{"Nome do restaurante".ljust(22)} | {"Categoria".ljust(20)} | {"Status"}")
     for restaurante in restaurantes:
         nome_restaurante = restaurante["Nome"]
         Categoria = restaurante["Categoria"]
-        Ativo = restaurante["ativo"]
-        print(f" - {nome_restaurante} | {Categoria} | {Ativo}")
+        Ativo = "ativado" if restaurante["ativo"] else "desativado"
+        print(f" - {nome_restaurante.ljust(20)} | {Categoria.ljust(20)} | {Ativo}")
     voltar_menu()
 
 def alterar_estado_restaurante():
