@@ -1,6 +1,8 @@
 import os
 
-restaurantes = ["Pizza Planet", "Los Pollos Hermanos", "Siri Cascudo"]
+restaurantes = [{"Nome":"Los Pollos Hermanos", "Categoria":"Frango Frito", "Ativo":False},
+                {"Nome":"Siri Cascudo", "Categoria":"Hamburgueria", "Ativo":True},
+                {"Nome":"Bar Do Moe", "Categoria":"Bar", "Ativo":False}]
 
 def finalizar_app():
     subtitulo("Fechando app...")
@@ -33,8 +35,13 @@ def cadastrar_restaurante():
 
 def lista_restaurantes():
     subtitulo("Lista de restaurantes cadastrados:")
+
     for restaurante in restaurantes:
-        print(f"{restaurante}")
+        nome_restaurante = restaurante["Nome"]
+        Categoria = restaurante["Categoria"]
+        Ativo = restaurante["Ativo"]
+        print(f" - {nome_restaurante} | {Categoria} | {Ativo}")
+
     voltar_menu()
 
 def escolher_opcao():
