@@ -29,8 +29,10 @@ def exibir_opcoes():
 def cadastrar_restaurante():
     subtitulo("Cadastro de novos restaurantes")
     nome_restaurante = input("Digite o nome do restaurante que deseja cadastrar: ")
-    restaurantes.append(nome_restaurante)
-    print(f"O restaurante {nome_restaurante} foi cadastrado com sucesso")
+    Categoria = input(f"Digite a categoria do restaurante {nome_restaurante}: ")
+    dados_restaurante = {"Nome":nome_restaurante, "Categoria":Categoria, "Ativo":False}
+    restaurantes.append(dados_restaurante)
+    print(f"O restaurante {nome_restaurante} foi cadastrado com sucesso!")
     voltar_menu()
 
 def lista_restaurantes():
